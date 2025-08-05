@@ -32,6 +32,7 @@
             :date="w.date"
             :location="w.location"
             :description="w.description"
+            :isOpen="w.isOpen"
           />
         </div>
       </div>

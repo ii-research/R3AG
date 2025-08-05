@@ -3,7 +3,7 @@
 <template>
   <div class="card" @click="openLink">
     <div class="card-title">
-      <h2>{{ title }}</h2>
+      <h2>{{ `${title}` }}<span :style="isOpen ? { color: '#FFD800' } : {}">{{`${isOpen ? '🔓 Opening for Participation!!!' : '🔒'}`}}</span></h2>
     </div>
     <p class="card-date-location">{{ date }} <span v-if="location">| {{ location }}</span></p>
     <p class="card-description">{{ description }}</p>
@@ -17,6 +17,7 @@ const props = defineProps<{
   date: string
   location?: string
   description: string
+  isOpen?: boolean
 }>()
 
 const openLink = () => { window.open(props.link, '_blank') }

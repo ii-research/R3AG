@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/R3AG/2025/img/logo.ico">
+
+    
+
+    <link rel="canonical" href="https://ii-research.github.io//R3AG/2025/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/R3AG/2025/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/R3AG/2025/css/hux-blog.min.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/R3AG/2025/css/syntax.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="http://cdn.staticfile.org/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Hux Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+<!--         <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/R3AG/2025/">2nd International ACM SIGIR Conference on Information Retrieval in the Asia Pacific</a>
+        </div> -->
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <!-- <li>
+                        <a href="/R3AG/2025/">Home</a>
+                    </li> -->
+                    
+                                                    
+                        <li>
+                            <a href="#Overview">Overview</a>
+                        </li>
+                                                    
+                        <li>
+                            <a href="#Call for Papers">Call for Papers</a>
+                        </li>
+                                                    
+                        <li>
+                            <a href="#Important Dates">Important Dates</a>
+                        </li>
+                                                    
+                        <li>
+                            <a href="#Schedule">Schedule</a>
+                        </li>
+                                                    
+                        <li>
+                            <a href="#Organizers">Organizers</a>
+                        </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+    <!-- Page Header -->
+<header class="intro-header" style="background-image: url('/R3AG/2025/img/xian_image.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
+                <div class="site-heading">
+                    <!-- <h1 style="font-size: 3.5rem">R3AG 2025: The Second Workshop on Refined and Reliable Retrieval Augmented Generation</h1> -->
+                    <h1 style="font-size: 3.5rem">R<sup>3</sup>AG 2025: The Second Workshop on Refined and Reliable Retrieval Augmented Generation</h1>
+                    <!--<hr class="small">-->
+                    <span class="subheading" style="font-size: 2rem"> December 10 @ SIGIR-AP 2025</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Main Content -->
+<div class="container-fluid">
+	<div class="row">
+        
+<!-- NO SIDEBAR -->
+    <!-- Post Container -->
+            <div class="col-lg-10 col-lg-offset-1 col-md-8 col-md-offset-1 post-container" style="text-align: justify;">
+                <h2 id="-r3ag-2025-the-second-workshop-on-refined-and-reliable-retrieval-augmented-generation-"><a name="Overview" style="color: inherit; text-decoration: none; text-align: center;"> R<sup>3</sup>AG 2025: The Second Workshop on Refined and Reliable Retrieval Augmented Generation </a></h2>
+
+<p>Retrieval-Augmented Generation (RAG) has gained wide attention as the key component to improve generative models with external knowledge augmentation from information retrieval. It has shown great prominence in enhancing the functionality and performance of large language model (LLM)-based applications. However, with the comprehensive application of RAG, more and more problems and limitations have been identified, thus urgently requiring further fundamental exploration to improve current RAG frameworks.</p>
+
+<p>This workshop aims to explore in depth how to conduct refined and reliable RAG for downstream AI tasks. We call for participants to re-examine and formulate the basic principles and practical implementation of refined and reliable RAG. The workshop serves as a platform for both academia and industry researchers to conduct discussions, share insights, and foster research to build the next generation of RAG systems. Participants will engage in discussions and presentations focusing on fundamental challenges, cutting-edge research, and potential pathways to improve RAG.</p>
+
+<h2 id="-call-for-papers-"><a name="Call for Papers" style="color: inherit; text-decoration: none;text-align: center;"> Call for Papers </a></h2>
+<p>We invite researchers to submit their latest work to the R<sup>3</sup>AG 2025 workshop on fundamental challenges associated with the RAG pipeline. The topics of interest include, but are not limited to:</p>
+<ul>
+  <li>User Intent Comprehension</li>
+  <li>Query and Knowledge Encoding</li>
+  <li>RAG for Complex Documents</li>
+  <li>Reliable Retrieval for RAG</li>
+  <li>Response Evaluation and Refinement</li>
+  <li>Multimodal RAG</li>
+</ul>
+
+<h2 id="submission-guidelines">Submission Guidelines</h2>
+<p>Submissions of papers must be at least 2 pages and at most 9 pages (including figures, tables, proofs, appendixes, acknowledgments, and any content except references) in length, with unlimited pages for references. Submissions of papers must be in English, in PDF format, in the current ACM two-column conference format. Suitable LaTeX, Word, and Overleaf templates are available from the <a href="https://www.acm.org/publications/proceedings-template">ACM Website</a> (use the “sigconf” proceedings template for LaTeX and the Interim Template for Word).</p>
+
+<p>All submissions of papers must be original and have not been published or accepted elsewhere or simultaneously submitted to another journal or conference. The review process of the submitted manuscripts will be done together with our program committee. The selection will depend on the technical soundness and relevance of submissions to the community that the workshop is targeting.</p>
+
+<p>At least one author of each accepted paper must attend the workshop on-site and present their work. Submissions must be anonymous and should be submitted electronically via <a href="https://easychair.org/conferences/?conf=r3agsigirap2025">EasyChair</a>.</p>
+
+<h2 id="-important-dates-"><a name="Important Dates" style="color: inherit; text-decoration: none; text-align: center;"> Important Dates </a></h2>
+
+<ul>
+  <li>Submission website open: <strong>August 13, 2025</strong>.</li>
+  <li>Individual workshop paper submission deadline: <strong>September 30, 2025</strong>.</li>
+  <li>Tentative paper acceptance notification: <strong>October 14, 2025</strong></li>
+  <li>R<sup>3</sup> Workshop: <strong>December 10, 2025</strong></li>
+  <li>Deadlines refer to 23:59 (11:59 pm) in the <a href="https://www.timeanddate.com/time/zones/aoe">AoE (Anywhere on Earth)</a> time zone.</li>
+</ul>
+
+<h2 id="-schedule-"><a name="Schedule" style="color: inherit; text-decoration: none; text-align: center;"> Schedule </a></h2>
+<table border="1" style="border-color: black; border-width: 3px; text-align: center;" cellspacing="2" cellpadding="2">
+    <tr>
+        <td width="200">Time (JST, UTC +9)</td>
+        <td width="250">Event</td>
+        <td width="250">Presenter</td>
+    </tr>
+    <tr>
+        <td>9:00-9:10</td>
+        <td>Welcome &amp; opening</td>
+        <td>Organizers</td>
+    </tr>
+    <tr>
+        <td>9:10-9:50</td>
+        <td> Academic invited talk</td>
+        <td> TBA </td>
+    </tr>
+    <tr>
+        <td>9:50-10:30</td>
+        <td>Industrial invited talk</td>
+        <td> TBA </td>
+    </tr>
+    <tr>
+        <td>10:30-10:50</td>
+        <td>Coffee break</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>10:50-11:40</td>
+        <td>Oral paper talks</td>
+        <td> TBA </td>
+    </tr>
+    <tr>
+        <td>11:40-12:00</td>
+        <td>Panel discussion</td>
+        <td> TBA </td>
+    </tr>
+</table>
+
+<h2 id="-organizers-"><a name="Organizers" style="color: inherit; text-decoration: none;"> Organizers </a></h2>
+<ul>
+  <li>
+    <p><strong>Haitao Yu</strong>, University of Tsukuba, yuhaitao@slis.tsukuba.ac.jp</p>
+  </li>
+  <li>
+    <p><strong>Yubo Fang</strong>, University of Tsukuba, s2430518@u.tsukuba.ac.jp</p>
+  </li>
+  <li>
+    <p><strong>Xuri Ge</strong>, Shandong University, xuri.ge@sdu.edu.cn</p>
+  </li>
+  <li>
+    <p><strong>Xin xin</strong>, Shandong University, xinxin@sdu.edu.cn</p>
+  </li>
+  <li>
+    <p><strong>Zihan Wang</strong>, University of Amsterdam, zihanwang.sdu@gmail.com</p>
+  </li>
+  <li>
+    <p><strong>Junchen Fu</strong>, University of Glasgow, j.fu.3@research.gla.ac.uk</p>
+  </li>
+  <li>
+    <p><strong>Joemon M. Jose</strong>, University of Glasgow, joemon.jose@glasgow.ac.uk</p>
+  </li>
+  <li>
+    <p><strong>Weizhi Ma</strong>, Tsinghua University, mawz12@hotmail.com</p>
+  </li>
+  <li>
+    <p><strong>Zhaochun Ren</strong>, Leiden University, z.ren@liacs.leidenuniv.nl</p>
+  </li>
+</ul>
+
+
+            </div>
+    <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+
+                <!-- Friends Blog -->
+                
+            </div>
+        
+	</div>
+</div>
+
+
+   
+
+
+
+</body>
+
+</html>

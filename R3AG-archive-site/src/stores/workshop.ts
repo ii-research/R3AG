@@ -1,11 +1,16 @@
 import { defineStore } from 'pinia'
 import data from '../data/data.json'
 
+
+export interface Link {
+  en: string;
+  cn?: string;
+}
 interface Workshop {
   id: string;
   title: string;
   location: string;
-  link: string;
+  link: string | Link;
   date: string;
   description: string;
   isOpen?: boolean;

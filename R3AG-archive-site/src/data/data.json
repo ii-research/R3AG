@@ -2,20 +2,23 @@
     "workshops": [
         {
             "id": "2nd-R3AG-workshop-2025",
-            "title": "R3AG: The Second Workshop on Refined and Reliable Retrieval Augmented Generation",
+            "title": "R\u00B3AG 2025: The Second Workshop on Refined and Reliable Retrieval-Augmented Generation",
             "location": "SIGIR-AP 2025, Xi'an, China",
-            "link": "https://ii-research.github.io/R3AG/sigir-ap-workshop-2nd/",
+            "link": {
+                "en": "https://ii-research.github.io/R3AG/2025/",
+                "cn": "https://ii-research-r3ag.netlify.app/2025/"
+            },
             "date": "2025-12-10",
-            "description": "The second workshop on refined and Reliable Retrieval Augmented Generation (R3AG).",
+            "description": "The second workshop on refined and Reliable Retrieval-Augmented Generation (R3AG).",
             "isOpen": true
         },
         {
             "id": "1st-R3AG-workshop-2024",
-            "title": "R3AG: The First Workshop on Refined and Reliable Retrieval Augmented Generation",
+            "title": "R\u00B3AG 2024: The First Workshop on Refined and Reliable Retrieval-Augmented Generation",
             "location": "SIGIR-AP 2024, Tokyo, Japan",
             "link": "https://r3ag-sigir-ap.github.io/",
             "date": "2024-12-12",
-            "description": "A workshop on refined and Reliable Retrieval Augmented Generation (R3AG).",
+            "description": "The first workshop on refined and Reliable Retrieval-Augmented Generation (R3AG).",
             "isOpen": false
         }
     ],

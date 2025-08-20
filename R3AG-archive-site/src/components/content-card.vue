@@ -1,5 +1,3 @@
-
-
 <template>
   <div class="card" @click="openLink">
     <div class="card-title">
@@ -11,17 +9,53 @@
 </template>
 
 <script setup lang="ts">
+import type { Link } from '@/stores/workshop';
+import { computed } from 'vue';
+
 const props = defineProps<{
   title: string
-  link: string
+  link: string | Link
   date: string
   location?: string
   description: string
   isOpen?: boolean
 }>()
 
-const openLink = () => { window.open(props.link, '_blank') }
+const default_link = computed(() => typeof props.link === 'string' ? props.link : props.link.en)
+const fallback_link = computed(() => typeof props.link === 'string' ? props.link : props.link.cn ?? props.link.en)
 
+async function canAccess(url: string, timeoutMs = 4000): Promise<boolean> {
+  // Try a HEAD/GET with no-cors so opaque responses still count as reachable.
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), timeoutMs);
+  try {
+    // Some servers don't allow HEAD; GET with no-store avoids cache
+    await fetch(url, { method: 'GET', mode: 'no-cors', cache: 'no-store', signal: controller.signal });
+    clearTimeout(timer);
+    return true; // If the network path works, fetch resolves (even opaque)
+  } catch (e) {
+    clearTimeout(timer);
+    return false; // Network error / timeout
+  }
+}
+
+const openLink = async () => {
+
+
+  // Open a blank window immediately to avoid popup blockers
+  const newWin = window.open('about:blank', '_blank');
+
+  const ok = await canAccess(default_link.value, 4000);
+  const target = ok ? default_link.value : (fallback_link.value || default_link.value);
+
+  if (newWin) {
+    // Navigate the already-opened window
+    newWin.location.href = target;
+  } else {
+    // Fallback if popup blocked
+    window.location.href = target;
+  }
+};
 </script>
 
 <style scoped lang="less">

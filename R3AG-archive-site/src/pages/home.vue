@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <div class="head-container">
+    <!-- <div class="head-container">
       <nav class="navbar">
         <ul>
           <li><button @click="scrollToSection('introduction')">Introduction</button></li>
@@ -13,10 +13,10 @@
         <h1>Welcome to the R3AG Archive</h1>
         <p>This site contains a collection of resources related to Reliable Retrieval Augmented Generation (R3AG).</p>
       </div>
-    </div>
+    </div> -->
     <div id="introduction" class="intro-container">
       <h1>Introduction</h1>
-      <p>Retrieval-augmented generation (RAG) has gained wide attention as the key component to improve generative models with external knowledge augmentation from information retrieval. It has shown great prominence in enhancing the functionality and performance of large language model (LLM)-based applications. However, with the comprehensive application of RAG, more and more problems and limitations have been identified, thus urgently requiring further fundamental exploration to improve current RAG frameworks.</p>
+      <p>Retrieval-augmented generation (RAG) has gained wide attention as the key component to improve generative models with external knowledge augmentation from information retrieval. It has shown great prominence in enhancing the functionality and performance of large language model (LLM)-based applications. However, with the comprehensive application of RAG, more and more problems and limitations have been identified, thus urgently requiring further fundamental exploration to improve current RAG frameworks. R³AG is intended as a long-term initiative, and we plan to expand it in various dimensions over the coming years. </p>
     </div>
     <div class="content-container">
       <div id="workshops">
@@ -51,14 +51,14 @@
         </div>
       </div>
     </div>
-    <div id="organization" class="intro-container">
+    <!-- <div id="organization" class="intro-container">
       <h1>Organization</h1>
       <p>
         We are II-Research in University of Tsukuba, Japan.
         We are a group of researchers and developers dedicated to advancing the field of R3AG. Our team consists of experts in information retrieval, natural language processing, and machine learning.
         For more information, please visit our <a href="https://ii-research.github.io/">Lab's website</a>.
       </p>
-    </div>
+    </div> -->
     <aside class="side-nav">
       <ul>
         <li>
@@ -73,9 +73,9 @@
         <li v-if="tutorialStore.tutorials.length > 0">
           <button @click="scrollToSection('tutorials')" :class="{ active: currentSection === 'tutorials' }">Tutorials</button>
         </li>
-        <li>
+        <!-- <li>
           <button @click="scrollToSection('organization')" :class="{ active: currentSection === 'organization' }">Organization</button>
-        </li>
+        </li> -->
       </ul>
     </aside>
   </div>
@@ -98,7 +98,7 @@ const onScroll = () => {
   // Check if user has scrolled to (or past) the bottom of the page
   const scrollBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight - 2
   if (scrollBottom) {
-    currentSection.value = 'organization'
+    currentSection.value = 'workshops'
     return
   }
 
@@ -203,6 +203,9 @@ const scrollToTop = () => {
   align-items: center;
   text-align: center;
   font-size: 1.5rem;
+  p {
+    text-align: justify;
+  }
 }
 .content-container {
   margin-top: 2rem;

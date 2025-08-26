@@ -7,7 +7,7 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vite.dev/config/
 export default defineConfig({
-  // base: '/R3AG/',
+  base: '/R3AG/',
   plugins: [
     vue(),
     vueJsx(),

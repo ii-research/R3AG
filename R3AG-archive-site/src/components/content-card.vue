@@ -21,8 +21,8 @@ const props = defineProps<{
   isOpen?: boolean
 }>()
 
-const default_link = computed(() => typeof props.link === 'string' ? props.link : props.link.en)
-const fallback_link = computed(() => typeof props.link === 'string' ? props.link : props.link.cn ?? props.link.en)
+const default_link = computed(() => typeof props.link === 'string' ? props.link : props.link.cn)
+const fallback_link = computed(() => typeof props.link === 'string' ? props.link : props.link.en ?? props.link.cn)
 
 async function canAccess(url: string, timeoutMs = 4000): Promise<boolean> {
   // Try a HEAD/GET with no-cors so opaque responses still count as reachable.
@@ -42,19 +42,21 @@ async function canAccess(url: string, timeoutMs = 4000): Promise<boolean> {
 const openLink = async () => {
 
 
-  // Open a blank window immediately to avoid popup blockers
-  const newWin = window.open('about:blank', '_blank');
+  window.open(default_link.value, '_blank')
 
-  const ok = await canAccess(default_link.value, 4000);
-  const target = ok ? default_link.value : (fallback_link.value || default_link.value);
+  // // Open a blank window immediately to avoid popup blockers
+  // const newWin = window.open('about:blank', '_blank');
 
-  if (newWin) {
-    // Navigate the already-opened window
-    newWin.location.href = target;
-  } else {
-    // Fallback if popup blocked
-    window.location.href = target;
-  }
+  // const ok = await canAccess(default_link.value, 400);
+  // const target = ok ? default_link.value : (fallback_link.value || default_link.value);
+
+  // if (newWin) {
+  //   // Navigate the already-opened window
+  //   newWin.location.href = target;
+  // } else {
+  //   // Fallback if popup blocked
+  //   window.location.href = target;
+  // }
 };
 </script>
 

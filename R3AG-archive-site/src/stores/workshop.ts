@@ -4,7 +4,7 @@ import data from '../data/data.json'
 
 export interface Link {
   en: string;
-  cn?: string;
+  cn: string;
 }
 interface Workshop {
   id: string;

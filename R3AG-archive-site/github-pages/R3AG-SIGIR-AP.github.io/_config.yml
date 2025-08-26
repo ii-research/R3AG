@@ -6,9 +6,8 @@ email:
 description: ""
 keyword: ""
 # url: "https://ii-research.github.io/" 
-url: "https://ii-research-r3ag.netlify.app/"              # your host, for absolute URL           # your host, for absolute URL
-# baseurl: "/R3AG/2025" 
-baseurl: "/2025"         # for example, '/blog' if your blog hosted on 'host/blog'        # for example, '/blog' if your blog hosted on 'host/blog'
+url: "https://ii.slis.tsukuba.ac.jp"          # your host, for absolute URL          
+baseurl: "/R3AG/2025"        # for example, '/blog' if your blog hosted on 'host/blog'
 
 
 
